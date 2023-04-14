@@ -12,6 +12,7 @@ const MyCesiumViewer = () => {
 
   useEffect(() => {
     if (cesiumContainer.current) {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       viewer = new Viewer(cesiumContainer.current, {
         terrainProvider: createWorldTerrain(),
         imageryProvider: new UrlTemplateImageryProvider({
